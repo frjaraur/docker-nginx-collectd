@@ -10,7 +10,7 @@ case $ACTION in
 		#	Server "COLLECTD_SERVER" "25826"
 		sed -i -e "s/Server .*/Server \"${COLLECTD_SERVER_NAME}\" \"${COLLECTD_SERVER_PORT}\"/g" /etc/collectd/collectd.conf
 
-		exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+		exec /usr/bin/supervisord --nodaemon -c /etc/supervisor/supervisord.conf
 	;;
 
 	control)
