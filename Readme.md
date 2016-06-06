@@ -1,7 +1,7 @@
 
-docker build -t nginxcoll -f Dockerfile nginxcoll
+docker build -t nginx-superv -f Dockerfile nginx-superv
 
-docker run -d nginxcoll 
+docker run -d nginx-superv 
 
 docker exec -ti $(docker ps -ql) supervisorctl
 
