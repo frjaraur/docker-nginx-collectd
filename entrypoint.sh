@@ -17,11 +17,6 @@ case $ACTION in
 		exec /usr/bin/supervisord --nodaemon -c /etc/supervisor/supervisord.conf
 	;;
 
-	control)
-
-		exec /usr/bin/supervisorctl -c /etc/supervisor/supervisord.conf
-	;;
-
 	*)
 		exec "$@"
 	;;
